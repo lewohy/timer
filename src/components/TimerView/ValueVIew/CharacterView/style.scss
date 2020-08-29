@@ -1,0 +1,19 @@
+@import '../../../../scss/value.scss';
+
+.character-view {
+    position: relative;
+    display: inline-flex;
+
+    .prev-char-view {
+        position: absolute;
+    }
+}
+
+.changing {
+
+    .prev-char-view {
+        transition: transform 0.5s, opacity 0.5s ease-out;
+        transform: rotateX(45deg) translateY(-$font-size-large - 48);
+        opacity: 0;
+    }
+}

@@ -1,18 +1,24 @@
 @import '../../../scss/value.scss';
 
 @media screen and (min-width: 768px) {
-    .divider-view {
+    .value-view {
         font-size: $font-size-medium;
     }
 }
 
 @media screen and (min-width: 1110px) {
-    .divider-view {
+    .value-view {
         font-size: $font-size-large;
     }
 }
 
-.divider-view {
-    font-weight: 900;
+.value-view {
+    font-weight: 100;
     display: inline-flex;
+
+    .label-view {
+        font-size: $font-size-small;
+        font-weight: 100;
+        display: inline-flex;
+    }
 }

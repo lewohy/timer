@@ -7,12 +7,16 @@ type IndexProp = {
 };
 
 export default function Index(props: Readonly<IndexProp>) {
-    let [current, setCurrent] = React.useState(0);
+    let [current, setCurrent] = React.useState(new Date().getTime());
 
     React.useEffect(() => {
         setInterval(() => {
             setCurrent(new Date().getTime());
         }, 2);
+        
+        //setTimeout(() => {
+        //    setCurrent(new Date().getTime());
+        //}, 1000);
     }, []);
 
     return (
