@@ -9,11 +9,26 @@
     }
 }
 
-.changing {
 
-    .prev-char-view {
-        transition: transform 0.5s, opacity 0.5s ease-out;
-        transform: rotateX(45deg) translateY(-$font-size-large - 48);
-        opacity: 0;
+
+@media screen and (min-width: 240px) {
+    .changing {
+    
+        .prev-char-view {
+            transition: transform 0.5s, opacity 0.5s ease-out;
+            transform: rotateX(45deg) translateY(-$font-size-medium * 1.5);
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    .changing {
+    
+        .prev-char-view {
+            transition: transform 0.5s, opacity 0.5s ease-out;
+            transform: rotateX(45deg) translateY(-$font-size-large * 1.5);
+            opacity: 0;
+        }
     }
 }
