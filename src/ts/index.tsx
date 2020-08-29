@@ -30,3 +30,9 @@ let index = (
 );
 
 ReactDOM.render(index, document.getElementById('index'));
+
+window.scrollTo(0,1);
+
+//document.body.addEventListener('click', e => {
+//    document.body.requestFullscreen();
+//});
