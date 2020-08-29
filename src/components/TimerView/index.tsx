@@ -31,7 +31,8 @@ export default function TimerView(props: Readonly<TimerViewProp>) {
                 value={ Math.floor(props.time / 1000 / 60 / 60 % 24) }
                 anim={ true }/>
 
-            <DividerView/>
+            <DividerView
+                id="hour-view-divider"/>
 
             <ValueView
                 id="minute-view"
@@ -41,7 +42,8 @@ export default function TimerView(props: Readonly<TimerViewProp>) {
                 value={ Math.floor(props.time / 1000 / 60 % 60) }
                 anim={ true }/>
 
-            <DividerView/>
+            <DividerView
+                id="minute-view-divider"/>
 
             <ValueView
                 id="second-view"
