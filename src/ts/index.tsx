@@ -7,6 +7,8 @@ let query: TimeQuery = queryString.parse(location.search, {
     parseNumbers: true
 }) as TimeQuery;
 
+let fullscreean = false;
+
 if (typeof(query.year) !== 'number' ||
     typeof(query.month) !== 'number' ||
     typeof(query.day) !== 'number' ||
@@ -33,6 +35,8 @@ ReactDOM.render(index, document.getElementById('index'));
 
 window.scrollTo(0, 1);
 
-//document.body.addEventListener('click', e => {
-//    document.body.requestFullscreen();
-//});
+document.body.addEventListener('click', e => {
+    fullscreean = !fullscreean;
+
+    fullscreean ? document.body.requestFullscreen() : document.exitFullscreen();
+});
