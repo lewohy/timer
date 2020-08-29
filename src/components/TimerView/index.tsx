@@ -20,7 +20,8 @@ export default function TimerView(props: Readonly<TimerViewProp>) {
                 value={ Math.floor(props.time / 1000 / 60 / 60 / 24) }
                 anim={ true }/>
 
-            <DividerView/>
+            <DividerView
+                id="day-view-divider"/>
 
             <ValueView
                 id="hour-view"

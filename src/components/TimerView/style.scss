@@ -1,0 +1,23 @@
+@media screen and (min-width: 412px) {
+    #day-view {
+        margin-bottom: 32px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #day-view-divider {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1110px) {
+    #day-view {
+        margin-bottom: 0px;
+        display: inline-flex;
+        justify-content: left;
+    }
+
+    #day-view-divider {
+        display: inline-flex;
+    }
+}
