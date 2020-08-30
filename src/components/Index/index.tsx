@@ -13,17 +13,13 @@ export default function Index(props: Readonly<IndexProp>) {
         setInterval(() => {
             setCurrent(new Date().getTime());
         }, 2);
-        
-        //setTimeout(() => {
-        //    setCurrent(new Date().getTime());
-        //}, 1000);
     }, []);
 
     return (
         <div
             className="index">
             <TimerView
-                time={ props.targetTime - current }/>
+                time={ props.targetTime > current ? props.targetTime - current : 0 }/>
         </div>
     );
 }
