@@ -1,6 +1,8 @@
-@media screen and (min-width: 240px) {
-    #day-view, #hour-view, #minute-view {
-        margin-bottom: 48px;
+@import '../../scss/value.scss';
+
+@media screen and (min-width: $small-width) {
+    #hour-view, #minute-view, #second-view {
+        margin-top: 64px;
         display: flex;
         justify-content: center;
     }
@@ -10,8 +12,8 @@
     }
 }
 
-@media screen and (min-width: 1110px) {
-    #day-view, #hour-view, #minute-view {
+@media screen and (min-width: $large-width) {
+    #hour-view, #minute-view, #second-view {
         margin-bottom: 0px;
         display: inline-flex;
         justify-content: left;

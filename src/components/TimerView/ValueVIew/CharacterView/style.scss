@@ -11,7 +11,7 @@
 
 
 
-@media screen and (min-width: 240px) {
+@media screen and (min-width: $small-width) {
     .changing {
     
         .prev-char-view {
@@ -22,7 +22,7 @@
     }
 }
 
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: $large-width) {
     .changing {
     
         .prev-char-view {

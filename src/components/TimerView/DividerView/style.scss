@@ -1,12 +1,12 @@
 @import '../../../scss/value.scss';
 
-@media screen and (min-width: 240px) {
+@media screen and (min-width: $small-width) {
     .divider-view {
         font-size: $font-size-medium;
     }
 }
 
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: $large-width) {
     .divider-view {
         font-size: $font-size-large;
     }

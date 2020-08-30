@@ -1,12 +1,12 @@
 @import '../../../scss/value.scss';
 
-@media screen and (min-width: 240px) {
+@media screen and (min-width: $small-width) {
     .value-view {
         font-size: $font-size-medium;
     }
 }
 
-@media screen and (min-width: 1110px) {
+@media screen and (min-width: $large-width) {
     .value-view {
         font-size: $font-size-large;
     }
@@ -15,10 +15,5 @@
 .value-view {
     font-weight: 100;
     display: inline-flex;
-
-    .label-view {
-        font-size: $font-size-small;
-        font-weight: 100;
-        display: inline-flex;
-    }
+    position: relative;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 import DividerView from './DividerView';
 import ValueView from './ValueVIew';
+import Box from './Box';
 
 type TimerViewProp = {
     time: number;
@@ -12,56 +13,68 @@ export default function TimerView(props: Readonly<TimerViewProp>) {
         <div
             className="timer-view">
 
-            <ValueView
+            <Box
                 id="day-view"
-                label="days"
-                space={ 2 }
-                spaceChar={ '0' }
-                value={ Math.floor(props.time / 1000 / 60 / 60 / 24) }
-                anim={ true }/>
+                label="days">
+
+                <ValueView
+                    space={ 2 }
+                    spaceChar={ '0' }
+                    value={ Math.floor(props.time / 1000 / 60 / 60 / 24) }
+                    anim={ true }/>
+            </Box>
 
             <DividerView
                 id="day-view-divider"/>
 
-            <ValueView
+            <Box
                 id="hour-view"
-                label="hours"
-                space={ 2 }
-                spaceChar={ '0' }
-                value={ Math.floor(props.time / 1000 / 60 / 60 % 24) }
-                anim={ true }/>
+                label="hours">
+
+                <ValueView
+                    space={ 2 }
+                    spaceChar={ '0' }
+                    value={ Math.floor(props.time / 1000 / 60 / 60 % 24) }
+                    anim={ true }/>
+            </Box>
 
             <DividerView
                 id="hour-view-divider"/>
 
-            <ValueView
+            <Box
                 id="minute-view"
-                label="minutes"
-                space={ 2 }
-                spaceChar={ '0' }
-                value={ Math.floor(props.time / 1000 / 60 % 60) }
-                anim={ true }/>
+                label="minutes">
+
+                <ValueView
+                    space={ 2 }
+                    spaceChar={ '0' }
+                    value={ Math.floor(props.time / 1000 / 60 % 60) }
+                    anim={ true }/>
+            </Box>
 
             <DividerView
                 id="minute-view-divider"/>
 
-            <ValueView
+            <Box
                 id="second-view"
-                space={ 2 }
-                spaceChar={ '0' }
-                value={ Math.floor(props.time / 1000 % 60) }
-                anim={ true }/>
+                label="seconds">
 
-            <DividerView
-                char="."
-                margin={ 4} />
+                <ValueView
+                    space={ 2 }
+                    spaceChar={ '0' }
+                    value={ Math.floor(props.time / 1000) % 60 }
+                    anim={ true }/>
 
-            <ValueView
-                id="milli-second-view"
-                label="seconds"
-                space={ 3 }
-                spaceChar={ '0' }
-                value={ Math.floor(props.time % 1000) }/>
+                <DividerView
+                    char="."
+                    margin={ 4 }/>
+
+                <ValueView
+                    space={ 3 }
+                    spaceChar={ '0' }
+                    value={ Math.floor(props.time % 1000) }
+                    anim={ false }/>
+            </Box>
         </div>
     );
 }

@@ -4,8 +4,6 @@ import NumberView from './CharacterView';
 import CharacterView from './CharacterView';
 
 type NumberViewProp = {
-    id: string;
-    label?: string;
     space: number;
     spaceChar: string;
     value: number;
@@ -21,7 +19,6 @@ export default function ValueView(props: Readonly<NumberViewProp>) {
 
     return (
         <div
-            id={ props.id }
             className="value-view" >
             {
                 value.map((e, i) => {
@@ -32,15 +29,6 @@ export default function ValueView(props: Readonly<NumberViewProp>) {
                             anim={ props.anim }/>
                     )   
                 })
-            }
-
-            {
-                props.label?
-                <div
-                    className="label-view">
-                    { props.label }
-                </div> :
-                ''
             }
         </div>
     );
