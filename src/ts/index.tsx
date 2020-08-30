@@ -24,7 +24,7 @@ if (typeof(query.year) !== 'number' ||
     query.second = 0;
 }
 
-let targetTime = new Date(query.year, query.month, query.day, query.hour, query.minute, query.second);
+let targetTime = new Date(query.year, query.month - 1, query.day, query.hour, query.minute, query.second);
 
 let index = (
     <Index
