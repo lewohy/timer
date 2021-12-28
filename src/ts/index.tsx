@@ -3,28 +3,15 @@ import ReactDOM from 'react-dom';
 import queryString from 'query-string';
 import Index from '../components/Index';
 
-let query: TimeQuery = queryString.parse(location.search, {
-    parseNumbers: true
-}) as TimeQuery;
+let query: TimeQuery = queryString.parse(location.search) as TimeQuery;
 
 let fullscreean = false;
 
-if (typeof(query.year) !== 'number' ||
-    typeof(query.month) !== 'number' ||
-    typeof(query.day) !== 'number' ||
-    typeof(query.hour) !== 'number' ||
-    typeof(query.minute) !== 'number' ||
-    typeof(query.second) !== 'number') {
-    
-    query.year = 2022;
-    query.month = 3;
-    query.day = 7;
-    query.hour = 0;
-    query.minute = 0;
-    query.second = 0;
-}
+let targetTime = new Date(query.target);
 
-let targetTime = new Date(query.year, query.month - 1, query.day, query.hour, query.minute, query.second);
+if (targetTime.toDateString() === 'Invalid Date') {
+    targetTime = new Date('2022-01-27 00:00:00');
+}
 
 let index = (
     <Index
