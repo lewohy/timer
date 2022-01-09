@@ -10,7 +10,7 @@ let fullscreean = false;
 let targetTime = new Date(query.target);
 
 if (targetTime.toDateString() === 'Invalid Date') {
-    targetTime = new Date('2022-01-27 00:00:00');
+    targetTime = new Date('2022-01-26 00:00:00');
 }
 
 let index = (
